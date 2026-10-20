@@ -100,6 +100,21 @@
 - **[Entity 1]**: [What it represents, key attributes without implementation]
 - **[Entity 2]**: [What it represents, relationships to other entities]
 
+### Data and Model Requirements *(mandatory for modeling features)*
+
+- Identify NASA C-MAPSS subsets, documentation/citation, provenance, schema validation,
+  and subset-specific engine identity.
+- Define RUL in cycles, label caps, engine-disjoint validation, causal features,
+  train-only preprocessing, and untouched test-ground-truth evaluation.
+- Define baseline comparisons, per-subset RMSE/MAE, asymmetric NASA/PHM score and its
+  formula/aggregation, and acceptance thresholds before final test evaluation.
+- Require Python and uv-only dependency management, including Azure ML environments;
+  neither pip nor uv pip is permitted.
+- Require automated tests and remote training evidence: successful Azure ML job ID,
+  reproducible configuration, tracked metrics, preprocessing, and model artifacts.
+- State workspace/access assumptions, authorization, cost/runtime limits, and simulation
+  limitations. Explain non-applicability for unrelated features.
+
 ## Success Criteria *(mandatory)*
 
 <!--

@@ -31,7 +31,21 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **Provenance**: Identify NASA C-MAPSS subsets, documentation/citation, source checksum,
+  schema validation, and versioned data assets.
+- **Leakage prevention**: Define RUL labels/caps, engine-disjoint splits, causal features,
+  train-only preprocessing, and untouched test ground truth.
+- **Python/uv**: Require Python, `pyproject.toml`, committed `uv.lock`, `uv add`,
+  `uv sync --locked`, and `uv run`. Prohibit pip and uv pip, including in Azure ML.
+- **Azure ML**: Define reproducible v2 jobs, uv-based environments, workspace configuration,
+  run provenance, metric/artifact tracking, and a bounded remote smoke test.
+- **Evidence**: Plan automated tests, a baseline, per-subset RMSE/MAE, documented asymmetric
+  NASA/PHM score, predetermined acceptance thresholds, and simulation-only claims.
+- **Security/cost**: Use identity-based access; exclude secrets and data/model binaries
+  from Git; bound compute/runtime; document cost/cleanup; obtain cloud authorization.
+
+Record evidence or a scoped non-applicability reason for each gate. Record owner-approved,
+expiring exceptions in Complexity Tracking.
 
 ## Project Structure
 
